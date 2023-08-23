@@ -54,7 +54,7 @@ void sumHigherPrices(int*& prices, int number) {
 int main()
 {
     int* prices = nullptr;
-	int number;
+	int number = 0;
 	fillWithRandoms(prices);
 	getAveragePrice(prices);
 	findLowerPrice(prices);
