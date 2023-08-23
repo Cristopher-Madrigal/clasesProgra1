@@ -40,12 +40,25 @@ float getAveragePriceWithOutLower(int*& prices) {
 	}
 	return sum / 50;
 }
-
+void sumHigherPrices(int*& prices, int number) {
+	int sumHigher = 0;
+	for (int i = 0; i < 50; i++)
+	{
+		if (prices[i] > number)
+		{
+			sumHigher += prices[i];
+		}
+	}
+}
 
 int main()
 {
     int* prices = nullptr;
+	int number;
 	fillWithRandoms(prices);
 	getAveragePrice(prices);
+	findLowerPrice(prices);
+	getAveragePriceWithOutLower(prices);
+	sumHigherPrices(prices, number);
 }
 
