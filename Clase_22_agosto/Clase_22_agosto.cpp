@@ -16,9 +16,11 @@ float getAveragePrice(int*& prices) {
 	return sum / 50;
 }
 
+
 int main()
 {
     int* prices = nullptr;
-    std::cout << "Hello World!\n";
+	fillWithRandoms(prices);
+	getAveragePrice(prices);
 }
 
