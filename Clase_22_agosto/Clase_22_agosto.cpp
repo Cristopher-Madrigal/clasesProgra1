@@ -20,9 +20,25 @@ int findLowerPrice(int*& prices) {
 	int lower = prices[0];
 	for (int i = 1; i < 50; i++)
 	{
-
+		if (prices[i] < lower)
+		{
+			lower = prices[i];
+		}
 	}
 	return lower;
+}
+
+float getAveragePriceWithOutLower(int*& prices) {
+	float sum = 0;
+	for (int i = 0; i < 50; i++)
+	{
+		if (prices[i] == findLowerPrice(*& prices))
+		{
+			i++;
+		}
+		sum += prices[i];
+	}
+	return sum / 50;
 }
 
 
