@@ -16,6 +16,15 @@ float getAveragePrice(int*& prices) {
 	return sum / 50;
 }
 
+int findLowerPrice(int*& prices) {
+	int lower = prices[0];
+	for (int i = 1; i < 50; i++)
+	{
+
+	}
+	return lower;
+}
+
 
 int main()
 {
